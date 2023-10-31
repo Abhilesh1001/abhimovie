@@ -1,0 +1,75 @@
+.backgroundcolor{
+    background-color: rgb(104, 171, 230);
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    height:600px;
+    width: 1400px;
+}
+
+@media only screen and (max-width:1400px) {
+    .container{
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .container{
+        height: 300px;
+        width: 500px;
+    }
+}
+
+
+@media only screen and (max-width:550px) {
+    .container{
+        height: 250px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .container{
+        height: 200px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .container{
+        height: 100px;
+        width:  200px;
+    }
+}
+
+
+
+
+@media only screen and (max-width:300px) {
+    .container{
+        height: 100x;
+        width: 400;
+    }
+}
+
+
+
+
+.mydiv{
+    display: block;
+}
+
+@media only screen and (max-width:800px) {
+    .mydiv{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:610px) {
+    .marginleftall{
+        display: none;
+    }
+}

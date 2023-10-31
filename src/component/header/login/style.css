@@ -1,0 +1,15 @@
+.backgroundlogin{
+    display: flex;  
+    justify-content: center;
+    width: 100%;
+    min-height: 470px;
+    max-height: auto;
+}
+.loginpage{
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 600px;
+    
+}

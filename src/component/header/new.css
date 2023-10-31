@@ -1,0 +1,12 @@
+.newComponent{
+    background-color:white;
+    color: black;
+    border: 2px solid rgb(195, 195, 214);
+    border-radius: 4px;
+    position: absolute;
+    top: 41px;
+    right: -300px;
+    width: 350px;
+    height: 120px;
+    z-index: 1;
+}

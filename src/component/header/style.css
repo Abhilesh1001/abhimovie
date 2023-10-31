@@ -1,0 +1,61 @@
+.navshrink{
+   display: flex;
+}
+.marginleftall{
+    margin-left: 400px;
+}
+.menubar{
+    display: none;
+}
+.mobileView{
+    display: none;
+}
+.mobilemenubar{
+    display: none;
+}
+@media only screen and (max-width:1400px){
+    .marginleftall{
+        margin-left: 200px;
+    }
+
+}
+@media only screen and (max-width:1200px){
+    .marginleftall{
+        margin-left: 100px;
+    }
+
+}
+
+@media only screen and (max-width:1100px){
+    .marginleftall{
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (max-width:1000px){
+    .navshrink{
+        display: none;
+    }
+    .marginleftall{
+        display: none;
+    }
+    .menubar{
+        display: block;
+    }
+    .mobileView{
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

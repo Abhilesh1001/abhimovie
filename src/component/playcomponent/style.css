@@ -1,0 +1,54 @@
+.backgroundcol{
+    width: 100%;
+    height: auto;
+    min-height: 470px;
+    
+}
+.playstyle1{
+    height: 40vw;
+    width: 100%;
+}
+@media only screen and (max-width:1200px) {
+    .playstyle1{
+        height: 35vw;
+    }
+    
+}
+
+
+.backgroundsecond{
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 40px;
+}
+
+@media only screen and (max-width:1000px) {
+    .backgroundsecond{
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    
+}
+
+
+
+
+
+.conatainet2{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    
+   
+}
+
+.image{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   width: 200px;
+   margin-left: 20px;
+   /* background-color: yellow; */
+}
+.widthset{
+  width: 600px;
+}
