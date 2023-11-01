@@ -6,6 +6,7 @@ import Moviedesc from '../../movienamerender/Moviedesc'
 import {useNavigate} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {getIndex,getProductData} from '../../../features/home/homeSlice'
+import useWindowWidth from '../../../hooks/useWindowWidth'
 
 
 
@@ -13,7 +14,10 @@ const Moviedis = () => {
     const {genres} = useSelector((state)=>state.home)
     const { url } = useSelector((state) => state.home)
     const { data, loading, error } = useFetch('/trending/all/day')
-    console.log(data)
+    const {width,height} = useWindowWidth()
+    const [divheight,setDivheight] = useState(0)
+    const [divWidth,setDivWidth] =useState()
+    // console.log(data)
     const [orginalurl, setOrignalUrl] = useState('')
     const [isHovered, setIsHovered] = useState(null)
     const dispatch = useDispatch()
@@ -25,7 +29,16 @@ const Moviedis = () => {
         navigate(`/playcom/${item}/${index}`)
     }
 
+    const handleMouseEnter = (event,index)=>{
+        
+        // console.log(window.innerWidth)
+        setDivWidth(event.clientX)
+        setDivheight(event.clientY)
+        setIsHovered(index)
 
+    }
+    console.log(divWidth,divheight)
+    const newdimention  = width-divWidth
 
     useEffect(() => {
 
@@ -45,8 +58,8 @@ const Moviedis = () => {
                 {
                     !loading && data?.results?.map((item, index) => {
                         const ImageUrl = url.backdrop + item.poster_path                       
-                        return <div key={index} className='moviCart m-2 relative' onClick={(e)=>handleClick(item.id,item.media_type)} id={index} onMouseEnter={() => 
-                        setIsHovered(index)} onMouseLeave={() => setIsHovered(null)}>                           
+                        return <div key={index} className='moviCart m-2 relative' onClick={(e)=>handleClick(item.id,item.media_type)} id={index} onMouseEnter={(event) => 
+                            handleMouseEnter(event,index)} onMouseLeave={() => setIsHovered(null)}>                           
                             <img src={`${ImageUrl}`} className='h-full w-full absolute rounded-md hover:filter hover:contrast-75'  alt="" />
                             <div className='flex mx-2 flex-wrap relative' style={{top:'200px'}}>
 
@@ -59,8 +72,13 @@ const Moviedis = () => {
                             })}
                             {/* end here...  */}
                             </div>
+                            {/* hover effect starts here  */}
+                            <div style={{position:'relative', top:`${divheight<400?"300px":'0px'}`,right:`${newdimention<300 ? "200px":"0px"}` }} >
                             {isHovered === index && <Moviedesc title={item.media_type==="movie"?item.title:item.name}  date={item.release_date} desc={item.overview
                             } rating={item.vote_average} />}
+
+                            </div>
+                            
                         </div>
                     })
                 }

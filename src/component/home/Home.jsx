@@ -12,7 +12,7 @@ const Home = () => {
   const [currentBackground, setCurrentBackground] = useState(null)
 
   const { url } = useSelector((state) => state.home)
-  console.log(currentBackground?.title)
+  console.log(currentBackground)
   const [desc, setDesc] = useState("")
   const [title, setTitle] = useState('')
   const [relsease, setRelse] = useState('')

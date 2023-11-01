@@ -16,6 +16,9 @@ const Search = () => {
       <div className='mt-4'>
       <Mainshow show='tv' data ={maindata} loading={loading}  />
       </div>
+      <div className='w-[10px] h-[25px]'>
+        
+      </div>
     </div>
   )
 }

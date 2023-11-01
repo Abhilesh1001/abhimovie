@@ -37,7 +37,6 @@ const MovieShow = () => {
                     <button className='box' onClick={handleNext}>Next</button>
                 </div>
       </div>
-      
       <Mainshow show='movie' data ={maindata} loading={loading}  />
       <div className='maincss'>
                 <div className='flex'>  
