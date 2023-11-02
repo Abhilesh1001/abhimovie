@@ -6,19 +6,23 @@ import NewCOmponent from './NewCOmponent'
 import {useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {getQuery} from '../../features/home/homeSlice'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {useSelector} from 'react-redux'
+import {getShow} from '../../features/home/homeSlice'
+
+
 
 
 const Navbar = () => {
   const [isHovered,setIsHovered] = useState(false)
   const [query,setQuery] = useState('')
+ const {show} = useSelector((state)=>state.home)
   const navigate = useNavigate()
   const [display,setDisplay] = useState("none")
-  console.log(display)
+  // console.log(display)
   // console.log(query)
   const dispatch =useDispatch()
   const handleSubmit=(e)=>{
-    console.log('ok')
+    // console.log('ok')
     e.preventDefault()
     // console.log(query)
     dispatch(getQuery(query))
@@ -27,7 +31,7 @@ const Navbar = () => {
   // console.log(isHovered)
 
   const mobdismenu =()=>{
-    console.log(display)
+    // console.log(display)
     setDisplay(`${display==="none"?"flex":"none"}`)
   }
 
@@ -38,10 +42,10 @@ const Navbar = () => {
         {/* Navshrin */}
         <ul className='flex  flex-wrap justify-center items-center relative navshrink'>
             <Link to={'/'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>Home</Link>
-            <Link to={'/tvshows'} className='mx-2 hover:bg-blue-200 p-2 rounded hover:text-black'>TV-SHOWS</Link>
-            <Link to={'/movieshows'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>MOVIES</Link>
+            <Link to={'/tvshows'} className='mx-2 hover:bg-blue-200 p-2 rounded hover:text-black' onClick={()=>dispatch(getShow('tv'))}>TV-SHOWS</Link>
+            <Link to={'/movieshows'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black' onClick={()=>dispatch(getShow('movie'))}>MOVIES</Link>
             <li className='mx-2  hover:bg-blue-200 p-2 rounded hover-container hover:text-black' onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
-              GENRES</li>
+               {show.charAt(0).toUpperCase() + show.slice(1)} GENRES</li>
               { isHovered && <div onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}><NewCOmponent /></div>}
         </ul>
 
@@ -49,10 +53,10 @@ const Navbar = () => {
         {/* for mobile view */}
         <ul className='flex flex-wrap flex-col justify-center items-center absolute top-[55px] z-20 bg-blue-800 w-[200px]  mobileView' style={{display:`${display}`}} >
             <Link to={'/'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>Home</Link>
-            <Link to={'/tvshows'} className='mx-2 hover:bg-blue-200 p-2 rounded hover:text-black'>TV-SHOWS</Link>
+            <Link to={'/tvshows'}  className='mx-2 hover:bg-blue-200 p-2 rounded hover:text-black'>TV-SHOWS</Link>
             <Link to={'/movieshows'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>MOVIES</Link>
             <li className='mx-2  hover:bg-blue-200 p-2 rounded hover-container hover:text-black' onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
-              GENRES</li>
+            {show.charAt(0).toUpperCase() + show.slice(1)} GENRES</li>
               { isHovered && <div onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}><NewCOmponent /></div>}
         </ul>
 

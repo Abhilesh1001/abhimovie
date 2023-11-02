@@ -13,7 +13,7 @@ import Playcom from './component/playcomponent/Playcom'
 import Tvmovies from './component/tvshows/Tvmovies'
 import MovieShow from './component/tvshows/MovieShow'
 import {getGeneres} from './features/home/homeSlice'
-
+import Genre from './component/genre/Genre'
 
 
 
@@ -69,6 +69,7 @@ const MainAapp = () => {
     <Route path='/playcom/:mediaType/:id' element={<Playcom />} />
     <Route path='/tvshows' element={<Tvmovies />} />
     <Route path='/movieshows' element={<MovieShow />} />
+    <Route path='/genre' element={<Genre />} />
       </Routes>
     <Footer />
     </BrowserRouter>

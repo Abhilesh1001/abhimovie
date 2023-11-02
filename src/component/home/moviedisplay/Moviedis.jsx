@@ -9,7 +9,6 @@ import {getIndex,getProductData} from '../../../features/home/homeSlice'
 import useWindowWidth from '../../../hooks/useWindowWidth'
 
 
-
 const Moviedis = () => {
     const {genres} = useSelector((state)=>state.home)
     const { url } = useSelector((state) => state.home)

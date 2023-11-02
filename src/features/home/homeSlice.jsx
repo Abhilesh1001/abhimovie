@@ -7,7 +7,10 @@ export const homeSlice = createSlice({
     genres : {},
     index : 0,
     productData : {},
-    query :''
+    query :'',
+    show :'tv',
+    genreFilterId: "16",
+    genreType : ''
   },
   reducers: {
     getApiConfiguration : (state,action)=>{
@@ -24,11 +27,22 @@ export const homeSlice = createSlice({
     },
     getQuery : (state,action)=>{
       state.query = action.payload
+    },
+    getShow : (state,action)=>{
+      state.show = action.payload
+    },
+    getGenreFilterId : (state,action)=>{
+      state.genreFilterId =action.payload
+    },
+    getGereType : (state,action)=>{
+      state.genreType = action.payload
     }
+
+
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { getApiConfiguration, getGeneres,getIndex,getProductData,getQuery } = homeSlice.actions
+export const { getApiConfiguration, getGeneres,getIndex,getProductData,getQuery,getShow,getGenreFilterId,getGereType } = homeSlice.actions
 
 export default homeSlice.reducer

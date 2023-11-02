@@ -9,9 +9,9 @@ import useWindowWidth from '../../hooks/useWindowWidth'
 // import Simalar from '../playcomponent/similar/Simalar'
 
 const Mainshow = ({ show,data,loading,type}) => {
-    
+    // console.log('error',data)
     const {width,height} = useWindowWidth()
-    console.log(width,height)
+    // console.log(width,height)
 
     const [divheight,setDivheight] = useState(0)
     const [divWidth,setDivWidth] =useState()
@@ -42,7 +42,7 @@ const Mainshow = ({ show,data,loading,type}) => {
     const [isHovered, setIsHovered] = useState(null)
     //   console.log('data',data?.results)
     const { url } = useSelector((state) => state.home)
-    console.log('diff',newdimention)
+    // console.log('diff',newdimention)
     const handleClick =(index,item,media) =>{
         console.log('ok')
         dispatch(getProductData(item))
@@ -54,7 +54,7 @@ const Mainshow = ({ show,data,loading,type}) => {
            
             <div style={{ display: 'flex', alignItems:'center',justifyContent:'center', margin: '10px 10px 0px 10px', flexWrap: 'wrap' }} >
                 {
-                    !loading && data?.results.slice(0,len).filter((items)=>items?.poster_path!==null).filter((another)=>another?.poster_path!==undefined)?.map((item, index) => {
+                    !loading && data?.results?.slice(0,len)?.filter((items)=>items?.poster_path!==null)?.filter((another)=>another?.poster_path!==undefined)?.map((item, index) => {
                         const ImageUrl = url.backdrop
                         
                         return <div key={index} style={{ width: '180px', height: '250px', margin: '6px' }} className='cursor-pointer' onMouseEnter={(event) =>
