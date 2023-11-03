@@ -1,5 +1,5 @@
 .backgroundcolor{
-    background-color: rgb(104, 171, 230);
+    background-color: rgb(104, 171, 203);
     width: 100%;
     height: auto;
     position: relative;
@@ -60,6 +60,7 @@
 
 .mydiv{
     display: block;
+    
 }
 
 @media only screen and (max-width:800px) {

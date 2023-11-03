@@ -6,11 +6,23 @@
 }
 .playstyle1{
     height: 40vw;
-    width: 100%;
+    width: 100vw;
 }
 @media only screen and (max-width:1200px) {
     .playstyle1{
         height: 35vw;
+    }
+    
+}
+@media only screen and (max-width:1200px) {
+    .playstyle1{
+        height: 50vw;
+    }
+    
+}
+@media only screen and (max-width:500px) {
+    .playstyle1{
+        height: 55vw;
     }
     
 }
@@ -50,5 +62,8 @@
    /* background-color: yellow; */
 }
 .widthset{
+  /* background-color: green; */
   width: 600px;
+  margin-right: 40px;
 }
+

@@ -55,7 +55,7 @@ const Home = () => {
       <div className="container w-full bg-slate-200 relative rounded cursor-pointer" style={{ backgroundImage: `url(${currentBackground === null || currentBackground === undefined ? background : url?.backdrop + currentBackground?.backdrop_path})`, backgroundSize: 'cover', transition: 'background-image 2s ease-in-out' }}>
         <div className='w-80 h-full opacity-80 p-0 bg-cover' >
           <div className='mydiv'>
-            <div className=' bg-slate-500'>
+            <div className=' bg-slate-500 p-2'>
               <div className='contaier text-4xl p-4 font-bold text-white'>
                 {currentBackground === null || currentBackground === undefined ? title : currentBackground?.title}
               </div>
@@ -65,7 +65,7 @@ const Home = () => {
               </div>
               <div className='bg-slate-600 w-60 h-17 m-2 p-2 text-white'>
                 <div>Realease : {currentBackground === null || currentBackground === undefined ? relsease : currentBackground?.release_date} </div>
-                <div>Rating : {currentBackground === null || currentBackground === undefined ? rating : currentBackground?.vote_average}</div>
+                <div>Rating : {currentBackground === null || currentBackground === undefined ? rating :Math.round( currentBackground?.vote_average)}</div>
               </div>
               <div className='m-2 h-2'>
 
@@ -84,7 +84,9 @@ const Home = () => {
         <div >
           <Moviedis />
         </div>
+        <div className='h-4'>
 
+        </div>
       </div>
     </div>
   )

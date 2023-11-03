@@ -21,7 +21,7 @@ const Tvmovies = () => {
       setPage(parseInt(value))
   }
   return (
-    <div className='top-[50px] xl:top-[60px] relative bg-blue-200 bgset pl-10 pr-10'>
+    <div className='top-[50px] xl:top-[60px] relative bgset pl-10 pr-10'>
       <button className=' bg-blue-500 p-2 relative top-4 rounded hover:bg-white hover:text-black cursor-pointer'>TVShows</button>
       <div className='maincss'>
                 <div className='flex'>  
