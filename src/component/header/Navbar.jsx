@@ -58,7 +58,7 @@ const Navbar = () => {
 
 
         {/* for mobile view */}
-        <ul className='flex flex-wrap flex-col justify-center items-center absolute top-[55px] z-20 bg-blue-800 w-[200px]  mobileView' style={{display:`${width>1000 ? "none" : display}`}} >
+        <ul className='flex pl-[50px] flex-wrap flex-col justify-start  absolute top-[55px] z-20 bg-blue-800 w-[250px]  mobileView' style={{display:`${width>1000 ? "none" : display}`}} >
             <Link to={'/'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>Home</Link>
             <Link to={'/tvshows'}  className='mx-2 hover:bg-blue-200 p-2 rounded hover:text-black' onClick={()=>dispatch(getShow('tv'))}>TV-SHOWS</Link>
             <Link to={'/movieshows'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black' onClick={()=>dispatch(getShow('movie'))}>MOVIES</Link>
@@ -68,7 +68,7 @@ const Navbar = () => {
 
             {/* search menubar mobile menu */}
 
-            <div className={`mobilemenubar absolute bg-blue-800  top-[160px]`} style={{display:`${display}`}}>
+            <div className={`mobilemenubar pl-[50px] absolute bg-blue-800 right-[0px] top-[160px]`} style={{display:`${display}`}}>
         <form className='flex flex-col' onSubmit={handleSubmit}>
          <input type="text" className='rounded-lg w-30 h-10 space-x-40 m-auto p-2 text-black' onChange={(e)=>setQuery(e.target.value)}/>
         <div><button type='submit' className='bg-blue-500 m-2 p-2 rounded hover:bg-slate-100 hover:text-black' >Search</button></div>
