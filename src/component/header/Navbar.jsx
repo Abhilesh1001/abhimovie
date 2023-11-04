@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <div>
         <div className=' bg-blue-800  text-white flex p-1 relative cursor-pointer'>          
-        <div className='after:content-["BESTMOVIEAPP"] after:text-red-400 after:flex after:flex-col after:text-sm text-lg pl-5'>ABHIMOVIES</div>
+        <Link to={'/'} className='after:content-["BESTMOVIEAPP"] after:text-red-400 after:flex after:flex-col after:text-sm text-lg pl-5'>ABHIMOVIES</Link>
         {/* Navshrin */}
         <ul className='flex  flex-wrap justify-center items-center relative navshrink'>
             <Link to={'/'} className='mx-2  hover:bg-blue-200 p-2 rounded hover:text-black'>Home</Link>

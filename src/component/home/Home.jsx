@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <div className='backgroundcolor top-[50px] xl:top-[60px] pb-2'>
-      <div className="container w-full bg-slate-200 relative rounded cursor-pointer" style={{ backgroundImage: `url(${currentBackground === null || currentBackground === undefined ? background : url?.backdrop + currentBackground?.backdrop_path})`, backgroundSize: 'cover', transition: 'background-image 2s ease-in-out' }}>
+      <div className="container  bg-slate-200 relative rounded cursor-pointer" style={{ backgroundImage: `url(${currentBackground === null || currentBackground === undefined ? background : url?.backdrop + currentBackground?.backdrop_path})`, backgroundSize: 'cover', transition: 'background-image 2s ease-in-out' }}>
         <div className='w-80 h-full opacity-80 p-0 bg-cover' >
           <div className='mydiv'>
             <div className=' bg-slate-500 p-2'>
