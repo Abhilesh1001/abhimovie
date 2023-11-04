@@ -95,7 +95,7 @@ const Playcom = () => {
                     <TopCast crewDetails={crewDetails} />
                     </div>                    
                 </div>
-                    <div className='bg-blue-600'><Player media={mediaType} mediaId = {id} /></div>
+                    <div className='bg-blue-600 pr-[10px]'><Player media={mediaType} mediaId = {id} /></div>
                     <div className='bg-blue-600 pt-4'><Simalar media={mediaType} mediaId = {id} /></div>
             </div>
 

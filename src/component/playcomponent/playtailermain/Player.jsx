@@ -13,11 +13,11 @@ const Player = ({media,mediaId}) => {
   return (
     <div>
         <div className='text-white ml-10 text-xl'>Official Vidieos</div>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap mt-[6px]'>
             {
                 vidieo?.results?.slice(0,10).map((ividieo,index)=>{
                     // console.log(ividieo)
-                return <div key={index} className='ml-10 rounded'>
+                return <div key={index} className='ml-10 rounded '>
                     <div className='playstyle' >
                     <ReactPlayer
                     url={`https://www.youtube.com/watch?v=${ividieo.key}`}
@@ -26,8 +26,7 @@ const Player = ({media,mediaId}) => {
                     height="100%"
                 />
                     </div>
-                       
-                <div className='my-2 text-white w-auto h-auto'>{ividieo.name.slice(0,70)}</div>
+                <div className='my-2 text-white w-auto pr-[60px] h-auto'>{ividieo.name.slice(0,70)}</div>
                 </div>
                 })
             }
