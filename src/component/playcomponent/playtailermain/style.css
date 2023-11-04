@@ -1,4 +1,73 @@
 .playstyle{
-  width: 200px;
-  height: 150px;
+  width: 550px;
+  height: 350px;
+  aspect-ratio: 16 / 9;
+
 }
+
+@media only screen and (max-width:1400px) {
+  .playstyle{
+    width: 452px;
+    height: 250px;
+  }
+  
+}
+/* import below 600 */
+
+@media only screen and (max-width:1260px) {
+  .playstyle{
+    width: 400px;
+    height: 250px;
+  
+  }
+  
+}
+@media only screen and (max-width:1175px) {
+  .playstyle{
+    width: 350px;
+    height: 205px;
+  
+  }
+  
+}
+@media only screen and (max-width:870px) {
+  .playstyle{
+    width: 600px;
+    height: 375px;
+  
+  }
+  
+}
+
+
+@media only screen and (max-width:715px) {
+  .playstyle{
+    width: 400px;
+    height: 250px;
+  
+  }
+  
+}
+
+@media only screen and (max-width:507px) {
+  .playstyle{
+    width: 300px;
+    height: 200px;
+  
+  }
+  
+}
+
+@media only screen and (max-width:507px) {
+  .playstyle{
+    width: 250px;
+    height: 150px;
+  
+  }
+  
+}
+
+
+
+
+

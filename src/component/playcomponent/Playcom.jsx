@@ -22,7 +22,7 @@ const Playcom = () => {
     const director = data?.crew?.filter((f) => f?.known_for_department === "Directing")
     // console.log('director',director)
     return (
-        <div className=' bg-blue-300 backgroundcol relative top-[50px] md:top-[55px]'>
+        <div className='bg-[rgb(104,171,203)] backgroundcol relative top-[50px] md:top-[55px]'>
             <div className='backgroundsecond'>
                 <div className='ml-15 pt-2 pb-2 flex'>
                     <div>Home / </div>
@@ -30,7 +30,7 @@ const Playcom = () => {
                 </div>
                 <div className='flex flex-wrap'>
             {
-                vidieo?.results?.slice(0,4)?.slice(0,1).map((ividieo,index)=>{
+                vidieo?.results?.slice(0,1).map((ividieo,index)=>{
                     // console.log(ividieo)
                 return <div key={index} className='  playstyle1 rounded'>
                        <ReactPlayer
@@ -48,11 +48,11 @@ const Playcom = () => {
                 <div className='conatainet2 bg-blue-600 text-white flex flex-wrap'>
                     <div className='image'>
                         <img src={`${url.backdrop}${productData?.poster_path
-                            }`} alt=""  className='w-full' />
+                            }`} alt=""  className='w-full rounded' />
                     </div>
                     <div className='relative left-10 top-4 widthset'>
                         <div className='text-2xl'>{mediaType === "movie" ? productData?.title : productData?.name}</div>
-                        <div className='w-80 sm:w-4/5'>{productData?.overview?.slice(0, 160)}...</div>
+                        <div className='w-80 sm:w-4/5'>{productData?.overview}</div>
                         <div className='flex flex-wrap mt-1'>
                             <div className='w-80'>
                                 <div className='flex'>
@@ -96,8 +96,7 @@ const Playcom = () => {
                     </div>                    
                 </div>
                     <div className='bg-blue-600'><Player media={mediaType} mediaId = {id} /></div>
-                    <div className='bg-blue-600'><Simalar media={mediaType} mediaId = {id} /></div>
-
+                    <div className='bg-blue-600 pt-4'><Simalar media={mediaType} mediaId = {id} /></div>
             </div>
 
         </div>

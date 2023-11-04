@@ -4,7 +4,6 @@ import Moviedis from './moviedisplay/Moviedis'
 import useFetch from '../../hooks/useFetch'
 import { useSelector } from 'react-redux'
 
-
 const Home = () => {
   const { data, } = useFetch("/movie/upcoming")
   const [background, setBackground] = useState("")

@@ -50,15 +50,15 @@
     margin-top: 30px;
     width: 100%;
     height: auto;
-    
-   
 }
 
 .image{
    margin-top: 10px;
+   
    margin-bottom: 10px;
-   width: 200px;
+   width: 400px;
    margin-left: 20px;
+   padding-right: 10px;
    /* background-color: yellow; */
 }
 .widthset{
