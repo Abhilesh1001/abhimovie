@@ -4,17 +4,22 @@ import {reducer,initialState} from './reducer'
 import axios from 'axios'
 import { useCusfetch } from '../../../hooks/useCusfetch'
 import {useNavigate} from 'react-router-dom'
+import Loading from '../../loading/Loading'
 
 const Login = () => {
   const [data,dispatch] =useReducer(reducer,initialState)
-  const {handleSubmit,logindata,errordata} =useCusfetch(data,dispatch)
+  const {handleSubmit,logindata,errordata,loading} =useCusfetch(data,dispatch)
   const navigate = useNavigate()
   const handleResetPassword = () =>{
       console.log('ok')
   }
   return (
     <div className='bg-[rgb(104,171,203)] backgroundlogin relative top-[50px] md:top-[55px]'>
-      <div className='loginpage'>
+
+      <div className='loginpage pl-[15px] pr-[15px]'>
+        <div className='flex justify-center w-full'>
+        {loading && <Loading />}
+        </div>
         {errordata && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{errordata}</div>}
         {logindata && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-green-700">{logindata}</div>}
         

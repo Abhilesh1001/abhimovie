@@ -7,14 +7,16 @@ import { getUser } from '../features/userauthentication/userSlice'
 //user login 
 export const useCusfetch = (data,dispatch) => {
     const [logindata, setLoginData] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [errordata, setError] = useState('')
     const disptch = useDispatch()
     const {baseurl} = useSelector((state)=>state.user)
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         localStorage.removeItem('token')
         try {
+            setLoading(true)
             const res = await axios.post(`${baseurl}cus/authlogin/`, data)
             // console.log(res.data.token.access)
             // console.log(res.data.msg)
@@ -46,7 +48,7 @@ export const useCusfetch = (data,dispatch) => {
             let res = response.data
             disptch(getUser(res))
             localStorage.setItem('user',JSON.stringify(response.data))
-            console.log('responsedata',res)
+            // console.log('responsedata',res)
             dispatch({type:'EMAIL',value : ""})
             dispatch({type:'PASSWORD',value : ""})
         } catch (error) {
@@ -54,7 +56,7 @@ export const useCusfetch = (data,dispatch) => {
         }
     }
 
-    return { handleSubmit,logindata,errordata }
+    return { handleSubmit,logindata,errordata,loading }
 }
 
 // export default useCusfetch

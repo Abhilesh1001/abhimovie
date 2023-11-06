@@ -36,12 +36,9 @@ const Moviedis = () => {
         setIsHovered(index)
 
     }
-    console.log(divWidth,divheight)
+    // console.log(divWidth,divheight)
     const newdimention  = width-divWidth
 
-    useEffect(() => {
-
-    }, [])
 
     return (
         <div>

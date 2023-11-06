@@ -7,17 +7,17 @@ const Tvmovies = () => {
   const [page,setPage] = useState(1)
   const { data:maindata, loading } = useFetch(`/tv/popular?&page=${page}`)
   const pageNo = maindata?.total_pages-3
-  console.log('pageNo',page)
+  // console.log('pageNo',page)
   const handlePrevious = ()=>{
-    console.log('Previous')
+    // console.log('Previous')
     setPage(Math.max(1,page-1))
   }
   const handleNext =()=>{
-    console.log('next')
+    // console.log('next')
     setPage(page +1)
   }
   const handlePage1 = (value)=>{
-       console.log(value)
+      //  console.log(value)
       setPage(parseInt(value))
   }
   return (

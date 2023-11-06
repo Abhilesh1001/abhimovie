@@ -40,7 +40,7 @@ const Navbar = () => {
     setDisplay(`${display === "none" ? "flex" : "none"}`)
   }
   const handleLogout = () => {
-    console.log('ok')
+    // console.log('ok')
     localStorage.removeItem('token')
     localStorage.removeItem('user')
     dispatch(getUser(null))
@@ -52,7 +52,8 @@ const Navbar = () => {
   }
 
   const hanndleClickResetpassword = ()=>{
-    console.log('ok')
+    // console.log('ok')
+    navigate('/resetpassword')
   }
 
 

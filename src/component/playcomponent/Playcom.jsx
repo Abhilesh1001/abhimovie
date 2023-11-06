@@ -7,22 +7,35 @@ import TopCast from './topCast/TopCast'
 import ReactPlayer from "react-player/youtube";
 import Player from './playtailermain/Player'
 import Simalar from './similar/Simalar'
+import {useNavigate} from 'react-router-dom'
 
 const Playcom = () => {
     const { url } = useSelector((state) => state.home)
     const { mediaType, id } = useParams()
     const { data: productData, loading: proLoading } = useFetch(`/${mediaType}/${id}`)
+    const {user} = useSelector((state)=>state.user)
+    // console.log('user',user)
     // console.log(productData)
-
+    const navigate = useNavigate()
     const { data: vidieo, loading: loadVidieo } = useFetch(`/${mediaType}/${id}/videos`)
-    console.log(vidieo)
+    // console.log(vidieo)
     const { data, loading } = useFetch(`/${mediaType}/${id}/credits`)
     // console.log(data)
     const crewDetails = data?.cast?.slice(0, 8).filter((f) => f?.known_for_department === "Acting")
     const director = data?.crew?.filter((f) => f?.known_for_department === "Directing")
     // console.log('director',director)
+    const handlleClick =() =>{
+        navigate('/login')
+    }
     return (
         <div className='bg-[rgb(104,171,203)] backgroundcol relative top-[50px] md:top-[55px]'>
+            {user===null ?<><div className='fixed w-full h-full bg-black opacity-40'></div>
+            <div className='fixed top-[50%] left-[35%] w-full h-full z-[1000] text-white' onClick={handlleClick}>
+                    <p className=' bg-blue-600 flex justify-center rounded cursor-pointer p-2 w-56 text-lg'>Please login for Access</p>
+            </div></>:''}
+            
+
+
             <div className='backgroundsecond'>
                 <div className='ml-15 pt-2 pb-2 flex'>
                     <div>Home / </div>

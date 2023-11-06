@@ -13,7 +13,7 @@ const Genre = () => {
   const [maindata,setMaindata] = useState([])
   const [loading,setLoading] = useState(true)
   
-  console.log('filterid',genreFilterId)
+  // console.log('filterid',genreFilterId)
    // with_genres
   //  console.log(page)
 
@@ -22,24 +22,24 @@ const Genre = () => {
   fetchDataFromApi(`/discover/${show}?page=${page}`,{with_genres:genreFilterId}).then((res=>{
     setMaindata(res)
     setLoading(false)
-    console.log('res',res)
+    // console.log('res',res)
   }))
  },[genreFilterId,page])
 
  
 
  const pageNo = maindata?.total_pages-3
- console.log('pageNo',page)
+//  console.log('pageNo',page)
  const handlePrevious = ()=>{
-   console.log('Previous')
+  //  console.log('Previous')
    setPage(Math.max(1,page-1))
  }
  const handleNext =()=>{
-   console.log('next')
+  //  console.log('next')
    setPage(page +1)
  }
  const handlePage1 = (value)=>{
-      console.log(value)
+      // console.log(value)
      setPage(parseInt(value))
  }
 

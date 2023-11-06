@@ -14,6 +14,7 @@ import Tvmovies from './component/tvshows/Tvmovies'
 import MovieShow from './component/tvshows/MovieShow'
 import {getGeneres} from './features/home/homeSlice'
 import Genre from './component/genre/Genre'
+import PasswordReset from './component/header/forgetpassword/PasswordReset'
 
 
 
@@ -70,6 +71,7 @@ const MainAapp = () => {
     <Route path='/tvshows' element={<Tvmovies />} />
     <Route path='/movieshows' element={<MovieShow />} />
     <Route path='/genre' element={<Genre />} />
+    <Route path='/resetpassword' element={<PasswordReset />} />
       </Routes>
     <Footer />
     </BrowserRouter>

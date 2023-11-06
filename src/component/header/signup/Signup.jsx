@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import { intialtState, reducer } from './reducersugnup'
 import { useSignup } from '../../../hooks/useSignup'
+import Loading from '../../loading/Loading'
 
 const Signup = () => {
 
@@ -9,7 +10,10 @@ const Signup = () => {
 
   return (
     <div className='bg-[rgb(104,171,203)] backgroundlogin relative top-[50px] md:top-[55px]'>
-      <div className='loginpage'>
+      <div className='loginpage pl-[15px] pr-[15px]'>
+        <div className='flex justify-center w-full'>
+        {loading &&  <Loading />}
+        </div>
         {signdata && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-green-700">{signdata}</div>}
         {nonfielderror && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{nonfielderror}</div>}
         <form onSubmit={handleSubmit}>

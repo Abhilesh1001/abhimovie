@@ -44,7 +44,7 @@ const Mainshow = ({ show,data,loading,type}) => {
     const { url } = useSelector((state) => state.home)
     // console.log('diff',newdimention)
     const handleClick =(index,item,media) =>{
-        console.log('ok')
+        // console.log('ok')
         dispatch(getProductData(item))
         dispatch(getIndex(index))
         navigate(`/playcom/${media === undefined ? show : media}/${item}`)

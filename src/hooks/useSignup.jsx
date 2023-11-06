@@ -12,18 +12,20 @@ export const useSignup =(data,dispatch)=>{
     const {baseurl} = useSelector((state)=>state.user)
 
     const handleSubmit = async (e) => {
+        setLoading(true)
         e.preventDefault()
         try {
             const res = await axios.post(`${baseurl}cus/authreg/`,data)
-            // console.log(res)
+            // console.log(res) 
             setSignData(res.data.msg)
             dispatch({type:'NAME',value:""})
             dispatch({type:'EMAIL',value:""})
             dispatch({type:'PASSWORD',value:""})
             dispatch({type:'PASSWORD2',value:""})
             dispatch({type:'CHECKED',value:false})
+            setLoading(false)
         }catch(err){
-            console.log(err)
+            // console.log(err)
             // console.log(err.response.data.errors.non_field_errors)
             setNonFieldError(err.response.data.errors.non_field_errors)
             setError(err.response.data.errors)
@@ -33,7 +35,7 @@ export const useSignup =(data,dispatch)=>{
             dispatch({type:'PASSWORD',value:""})
             dispatch({type:'PASSWORD2',value:""})
             dispatch({type:'CHECKED',value:false})
-  
+            setLoading(false)
         }
 
     }
