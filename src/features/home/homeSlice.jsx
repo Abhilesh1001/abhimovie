@@ -10,7 +10,7 @@ export const homeSlice = createSlice({
     query :'',
     show :'tv',
     genreFilterId: "16",
-    genreType : ''
+    genreType : '',
   },
   reducers: {
     getApiConfiguration : (state,action)=>{

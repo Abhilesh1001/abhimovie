@@ -3,6 +3,7 @@
 }
 .marginleftall{
     margin-left: 400px;
+    display: flex;
 }
 .menubar{
     display: none;
