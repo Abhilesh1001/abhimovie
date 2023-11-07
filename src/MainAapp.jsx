@@ -15,6 +15,8 @@ import MovieShow from './component/tvshows/MovieShow'
 import {getGeneres} from './features/home/homeSlice'
 import Genre from './component/genre/Genre'
 import PasswordReset from './component/header/forgetpassword/PasswordReset'
+import ResetForgetPassword from './component/header/forgetpassword/ResetForgetPassword'
+import ResetPasswordWithUidToken from './component/header/forgetpassword/ResetPasswordWithUidToken'
 
 
 
@@ -72,6 +74,9 @@ const MainAapp = () => {
     <Route path='/movieshows' element={<MovieShow />} />
     <Route path='/genre' element={<Genre />} />
     <Route path='/resetpassword' element={<PasswordReset />} />
+    <Route path='/resetforgetpassword' element={<ResetForgetPassword />} />
+    <Route exact path="resetpassworduidtoken/:id/:token" element={<ResetPasswordWithUidToken />} />
+    {/* <Route exact path="resetpassworduidtoken" element={<ResetPasswordWithUidToken />} /> */}
       </Routes>
     <Footer />
     </BrowserRouter>

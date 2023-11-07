@@ -11,7 +11,7 @@ const Login = () => {
   const {handleSubmit,logindata,errordata,loading} =useCusfetch(data,dispatch)
   const navigate = useNavigate()
   const handleResetPassword = () =>{
-      console.log('ok')
+      navigate('/resetforgetpassword')
   }
   return (
     <div className='bg-[rgb(104,171,203)] backgroundlogin relative top-[50px] md:top-[55px]'>
