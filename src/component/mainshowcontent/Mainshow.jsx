@@ -10,7 +10,7 @@ import useWindowWidth from '../../hooks/useWindowWidth'
 
 const Mainshow = ({ show,data,loading,type}) => {
     // console.log('error',data)
-    const {width,height} = useWindowWidth()
+    const {width} = useWindowWidth()
     // console.log(width,height)
 
     const [divheight,setDivheight] = useState(0)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './movieplay.css'
 import { useSelector } from 'react-redux'
 import useFetch from '../../../hooks/useFetch'
@@ -12,12 +12,11 @@ import useWindowWidth from '../../../hooks/useWindowWidth'
 const Moviedis = () => {
     const {genres} = useSelector((state)=>state.home)
     const { url } = useSelector((state) => state.home)
-    const { data, loading, error } = useFetch('/trending/all/day')
-    const {width,height} = useWindowWidth()
+    const { data, loading} = useFetch('/trending/all/day')
+    const {width} = useWindowWidth()
     const [divheight,setDivheight] = useState(0)
     const [divWidth,setDivWidth] =useState()
     // console.log(data)
-    const [orginalurl, setOrignalUrl] = useState('')
     const [isHovered, setIsHovered] = useState(null)
     const dispatch = useDispatch()
     const navigate = useNavigate()

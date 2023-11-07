@@ -25,7 +25,7 @@ const ResetPasswordWithUidToken = () => {
         try {
             const response = await axios.post(`${baseurl}cus/send-reset-password/${id}/${token}/`, data)
             const res = response.data.msg
-            console.log('response', res)
+            // console.log('response', res)
             setPassword('')
             setPassword2('')
             setMessage(res)
@@ -33,7 +33,7 @@ const ResetPasswordWithUidToken = () => {
         }
 
         catch (error) {
-            console.log('error', error?.response?.data?.errors?.non_field_errors)
+            // console.log('error', error?.response?.data?.errors?.non_field_errors)
             setError(error?.response?.data?.errors?.non_field_errors)
             setLoading(false)
         }

@@ -1,7 +1,6 @@
 import React,{useReducer} from 'react'
 import './style.css'
 import {reducer,initialState} from './reducer'
-import axios from 'axios'
 import { useCusfetch } from '../../../hooks/useCusfetch'
 import {useNavigate} from 'react-router-dom'
 import Loading from '../../loading/Loading'

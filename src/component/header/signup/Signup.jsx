@@ -19,20 +19,20 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           {error?.name && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error?.name}</div>}
           <label className="form-label my-2">Name</label>
-          <input type="text" value={data.name} onChange={(e) => dispatch({ type: 'NAME', value: e.target.value })} className="form-control" />
+          <input type="text" value={data.name} onChange={(e) => dispatch({ type: 'NAME', value: e.target.value })} className="form-control" required />
 
           {error?.email && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error?.email}</div>}
           <label className="form-label my-2"  >Email</label>
-          <input type="email" value={data.email} onChange={(e) => dispatch({ type: 'EMAIL', value: e.target.value })} className="form-control" />
+          <input type="email" value={data.email} onChange={(e) => dispatch({ type: 'EMAIL', value: e.target.value })} className="form-control" required />
 
           {error?.password && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error?.password}</div>}
           <label className="form-label my-2">Password</label>
-          <input type="text" value={data.password} onChange={(e) => dispatch({ type: 'PASSWORD', value: e.target.value })} className="form-control" />
+          <input type="password" value={data.password} onChange={(e) => dispatch({ type: 'PASSWORD', value: e.target.value })} className="form-control" required />
           {error?.password2 && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error.password2}</div>}
           <label className="form-label my-2">Confirmed Password</label>
-          <input type="text" value={data.password2} onChange={(e) => dispatch({ type: 'PASSWORD2', value: e.target.value })} className="form-control" />
+          <input type="password" value={data.password2} onChange={(e) => dispatch({ type: 'PASSWORD2', value: e.target.value })} className="form-control" required />
           <span className='flex'>
-            <input type="checkbox" value={data.tc} onChange={(e) => dispatch({ type: 'CHECKED', value: e.target.checked })} className="form-check-input my-2 mx-2" />
+            <input type="checkbox" checked={data.tc} onChange={(e) => dispatch({ type: 'CHECKED', value: e.target.checked })} className="form-check-input my-2 mx-2" required />
             <label htmlFor="checkbox" className='flex items-center justify-center'>Are you sure to Singup</label>
           </span>
           <button className='btn btn-primary my-2'>Submit</button>

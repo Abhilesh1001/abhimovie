@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import { Link } from 'react-router-dom'
-import Login from './login/Login'
 import NewCOmponent from './NewCOmponent'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -21,7 +20,7 @@ const Navbar = () => {
   const [drop, setDrop] = useState("none")
   const navigate = useNavigate()
   const [display, setDisplay] = useState("none")
-  const { width, height } = useWindowWidth()
+  const { width} = useWindowWidth()
   const dispatch = useDispatch()
   const handleSubmit = (e) => {
     e.preventDefault()
