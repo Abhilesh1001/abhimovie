@@ -18,7 +18,7 @@ const Mainshow = ({ show,data,loading,type}) => {
     // console.log(divWidth,divheight)
     const newdimention  = width-divWidth
     
-    const [len,setLen] = useState(20)
+    const [len,setLen] = useState(20)   
     // console.log(data)
     useEffect(()=>{
         if(type==="similar"){
@@ -52,14 +52,14 @@ const Mainshow = ({ show,data,loading,type}) => {
     return (
         <div>
            
-            <div style={{ display: 'flex', alignItems:'center',justifyContent:'center', margin: '10px 10px 0px 10px', flexWrap: 'wrap' }} >
+            <div style={{ display: 'flex', alignItems:'center',justifyContent:'center', flexWrap: 'wrap' }} >
                 {
                     !loading && data?.results?.slice(0,len)?.filter((items)=>items?.poster_path!==null)?.filter((another)=>another?.poster_path!==undefined)?.map((item, index) => {
                         const ImageUrl = url.backdrop
                         
-                        return <div key={index} style={{ width: '180px', height: '250px', margin: '6px' }} className='cursor-pointer' onMouseEnter={(event) =>
+                        return <div key={index}  className='cursor-pointer mainbox' onMouseEnter={(event) =>
                             handleMouseEnter(event,index)} onMouseLeave={() => setIsHovered(null)} onClick={()=>handleClick(index,item.id,item.media_type)}>
-                            <img src={`${ImageUrl}${item.poster_path}`} style={{ width: '180px', height: '250px',borderRadius:'4px' }} alt="Image not found" />
+                            <img src={`${ImageUrl}${item.poster_path}`}  alt="Image not found" className='mainbox1'/>
                         <div style={{position:'relative', top:`${divheight<500?"100px":'-200px'}`,right:`${newdimention<300 ? "200px":"0px"}` }}>
                             {isHovered === index && <Moviedesc title={"movie" === `${show}` || item.media_type === "movie" ? item.title : item.name} date={item.release_date} desc={item.overview
                             } rating={item.vote_average} />}

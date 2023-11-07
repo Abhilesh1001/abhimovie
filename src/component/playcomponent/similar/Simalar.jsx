@@ -8,8 +8,8 @@ const Simalar = ({media,mediaId}) => {
     // console.log('data',data)
     
   return (
-    <div className='ml-10 pb-4 text-xl'>
-        <div className=' text-white'>Similar {media} Shows</div>
+    <div className='pb-4 text-xl'>
+        <div className=' text-white ml-10 pb-2'>Similar {media} Shows</div>
             <Mainshow show={media} data={data} type='similar' loading={loading} />
     </div>
   )

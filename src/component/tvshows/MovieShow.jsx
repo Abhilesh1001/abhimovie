@@ -24,7 +24,7 @@ const MovieShow = () => {
 
 
   return (
-    <div className=' bg-blue-200 bgset pl-10 pr-10 relative top-[50px] xl:top-[60px]'>
+    <div className=' bg-blue-200 bgset relative top-[50px] xl:top-[60px] 2xl:pl-10 2xl:pr-10 xl:pl-6 xl:pr-6 lg:pl-4 lg:pr-4 md:pl-2 md:pr-2 pl-1 pr-1'>
       <button className=' bg-blue-500 p-2 relative top-4 rounded hover:bg-white hover:text-black cursor-pointer'>MovieShows</button>
 
       <div className='maincss'>

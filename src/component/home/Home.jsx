@@ -16,6 +16,7 @@ const Home = () => {
   const [title, setTitle] = useState('')
   const [relsease, setRelse] = useState('')
   const [rating, setRating] = useState('')
+  
 
 
   const getRandomBackground = () => {
@@ -34,7 +35,6 @@ const Home = () => {
 
 
   useEffect(() => {
-
     const bgData = data?.results[Math.floor(Math.random() * 20)]
     const bg = url.backdrop + bgData?.backdrop_path
     setNBackgroundImg(data?.results?.slice(0, 10))

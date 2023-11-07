@@ -16,7 +16,7 @@ const Player = ({media,mediaId}) => {
             {
                 vidieo?.results?.slice(0,10).map((ividieo,index)=>{
                     // console.log(ividieo)
-                return <div key={index} className='ml-10 rounded '>
+                return <div key={index} className='ml-2 md:ml-6 lg:ml-8 xl:ml-10 mr-2  rounded '>
                     <div className='playstyle' >
                     <ReactPlayer
                     url={`https://www.youtube.com/watch?v=${ividieo.key}`}

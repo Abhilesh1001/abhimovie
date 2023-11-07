@@ -33,9 +33,6 @@ const Playcom = () => {
             <div className='fixed top-[50%] left-[35%] w-full h-full z-[1000] text-white' onClick={handlleClick}>
                     <p className=' bg-blue-600 flex justify-center rounded cursor-pointer p-2 w-56 text-lg'>Please login for Access</p>
             </div></>:''}
-            
-
-
             <div className='backgroundsecond'>
                 <div className='ml-15 pt-2 pb-2 flex'>
                     <div>Home / </div>
@@ -63,6 +60,9 @@ const Playcom = () => {
                         <img src={`${url.backdrop}${productData?.poster_path
                             }`} alt=""  className='w-full rounded' />
                     </div>
+                    
+                    {/* movie name ,genera name and other details  */}
+
                     <div className='relative left-10 top-4 widthset'>
                         <div className='text-2xl'>{mediaType === "movie" ? productData?.title : productData?.name}</div>
                         <div className='w-80 sm:w-4/5'>{productData?.overview}</div>
@@ -104,12 +104,15 @@ const Playcom = () => {
                             </div>
                         </div>
                     </div>
+
+
+                    {/* crew start here  */}
                     <div>
                     <TopCast crewDetails={crewDetails} />
                     </div>                    
                 </div>
                     <div className='bg-blue-600 pr-[10px]'><Player media={mediaType} mediaId = {id} /></div>
-                    <div className='bg-blue-600 pt-4'><Simalar media={mediaType} mediaId = {id} /></div>
+                    <div className='bg-blue-600'><Simalar media={mediaType} mediaId = {id} /></div>
             </div>
 
         </div>
