@@ -5,11 +5,91 @@
     margin: 2px;
 }
 
-@media only screen and (max-width:1400) {
+.genresetting{
+    position: relative;
+    top: 220px;
+    display: flex;
+}
+
+@media only screen and (max-width:1400px) {
     .moviCart {
         width: 190px;
+        height: 250px;
+    }
+    .genresetting{ 
+        top: 180px;
+      
+    }
+    
+}
+
+@media only screen and (max-width:1259px) {
+    .moviCart {
+        width: 180px;
+        height: 230px;
+    }
+    .genresetting{ 
+        top: 160px;
+      
     }
 }
+
+@media only screen and (max-width:1259px) {
+    .moviCart {
+        width: 170px;
+        height: 220px;
+    }
+    .genresetting{ 
+        top: 160px;
+      
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .moviCart {
+        width: 150px;
+        height: 200px;
+    }
+    .genresetting{ 
+        top: 140px;
+        display: none;
+      
+    }
+}
+
+
+
+@media only screen and (max-width:536px) {
+    .moviCart {
+        width: 120px;
+        height: 160px;
+    }
+}
+
+@media only screen and (max-width:428px) {
+    .moviCart {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width:371px) {
+    .moviCart {
+        width: 90px;
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width:371px) {
+    .moviCart {
+        width: 90px;
+        height: 130px;
+    }
+}
+
+
+
+
 
 .widthrequire {
     width: 120px;
@@ -19,3 +99,4 @@
 .bgcolorgrad {
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
+
