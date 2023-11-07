@@ -22,11 +22,13 @@ const ResetForgetPassword = () => {
          setMessage(res?.msg)   
         // console.log(res)
         setLoading(false)
+        setEmail('')
             
         }catch(error){
             // console.log(error)
             setError(error?.response?.data?.errors?.non_field_errors)
             setLoading(false)
+            setEmail('')
         }
         
     }
