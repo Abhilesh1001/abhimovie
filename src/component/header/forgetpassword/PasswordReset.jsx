@@ -50,15 +50,13 @@ const PasswordReset = () => {
         <form onSubmit={handleSubmit}>
         {error?.password && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error?.password}</div>}
         <label className="form-label my-2" >Password</label>
-         <input value={password} className="form-control" onChange={(e)=>setPassword(e.target.value)}  />
+         <input type='password' value={password} className="form-control" onChange={(e)=>setPassword(e.target.value)}  />
          {error?.password2 && <div className="mt-2 bg-blue-300 rounded flex justify-center p-2 text-lg text-red-600">{error?.password2}</div>}
         <label className="form-label my-2">Confirmed Password</label>
          <input value={password2}  type="password" onChange={(e)=>setPassword2(e.target.value)}  className="form-control"  />
          <button className='btn btn-primary my-2'>Submit</button>
-
         </form>
       </div>
-
     </div>
   )
 }
