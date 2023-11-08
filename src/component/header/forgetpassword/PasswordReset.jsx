@@ -40,7 +40,7 @@ const PasswordReset = () => {
         }
     }
   return (
-    <div className='bg-[rgb(104,171,203)] w-full h-[500px] flex justify-center relative top-[50px] md:top-[60px]'>
+    <div className='bg-[rgb(104,171,203)] w-full h-[500px] flex justify-center relative top-[50px] md:top-[55px]'>
         <div className='pageforgetpass'>
             <div className='flex justify-center w-full'>
          {loading && <Loading /> }
